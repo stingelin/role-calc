@@ -1,6 +1,6 @@
 {
     "name": "role-calc",
-    "version": "1.1.6",
+    "version": "1.2.0",
     "description": "library to work with roles, contains calculation of times for the session, validation of required roles",
     "main": "dist/index.js",
     "repository": {
@@ -10,7 +10,7 @@
     "scripts": {
         "start": "npm run compile & nodemon src/index.js --exec babel-node",
         "compile": "babel --watch src -d dist",
-        "test": "mocha --compilers js:babel-register"
+        "test": "mocha --compilers js:@babel/register"
     },
     "keywords": [
         "role",
@@ -30,13 +30,22 @@
         "npm": "^3.9.5"
     },
     "devDependencies": {
-        "babel-cli": "^6.26.0",
-        "babel-core": "^6.26.0",
+        "@babel/cli": "^7.0.0",
+        "@babel/core": "^7.0.0",
+        "@babel/node": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.0.0",
+        "@babel/plugin-proposal-decorators": "^7.0.0",
+        "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+        "@babel/plugin-proposal-function-sent": "^7.0.0",
+        "@babel/plugin-proposal-json-strings": "^7.0.0",
+        "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+        "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+        "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+        "@babel/plugin-syntax-import-meta": "^7.0.0",
+        "@babel/plugin-transform-runtime": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/register": "^7.0.0",
         "babel-plugin-add-module-exports": "^0.2.1",
-        "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-stage-2": "^6.24.1",
-        "babel-register": "^6.26.0",
         "mocha": "^5.0.1"
     },
     "dependencies": {
